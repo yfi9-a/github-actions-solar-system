@@ -7,14 +7,17 @@ on:
       - main
       - 'feature/*'
 env:
-  MONGO_URI: ‘mongodb+srv://supercluster.d83jj.mongodb.net/superData'
+  MONGO_URI: "mongodb+srv://supercluster.d83jj.mongodb.net/superData"
   MONGO_USERNAME: superuser
-  MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}  
+  MONGO_PASSWORD: "${{ secrets.test }}" 
 jobs:
     unit-testing:
         name: Unit Testing
         runs-on: ubuntu-latest
         steps:
+        - name: echo secret
+          run: echo $MONGO_PASSWORD
+          
         - name: Checkout Repository
           uses: actions/checkout@v4
 

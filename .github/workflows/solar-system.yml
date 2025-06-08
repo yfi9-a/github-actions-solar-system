@@ -16,8 +16,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: echo secret
-          run: echo $MONGO_PASSWORD
-          
+          run: echo ${{env.MONGO_PASSWORD}}
+
         - name: Checkout Repository
           uses: actions/checkout@v4
 

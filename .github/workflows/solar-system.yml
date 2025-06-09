@@ -79,7 +79,7 @@ jobs:
           uses: docker/login-action@v4
           with:
             registry: gghcr.io
-            username: ${{ github.repository_owner }}
+            username: "yfi9-a"
             password: ${{ secrets.GITHUB_TOKEN }}
 
         - name: push Docker Image

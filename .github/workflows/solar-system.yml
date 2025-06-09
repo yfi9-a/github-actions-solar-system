@@ -88,4 +88,4 @@ jobs:
             context: .
             file: Dockerfile
             push: true
-            tags: "gghcr.io/${{githubUsername}}/solar-system:${{githubSHA}}"
+            tags: "gghcr.io/yfi9-a/solar-system:${{ github.sha }}'"
